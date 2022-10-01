@@ -1,0 +1,81 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Go Template",
+	"patterns": [
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#operators"
+		},
+		{
+			"include": "#variables"
+		},
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		}
+	],
+	"repository": {
+		"comments": {
+			"patterns": [
+				{
+					"begin": "#",
+					"captures": {
+						"0": {
+							"name": "punctuation.definition.comment.gotemplate"
+						}
+					},
+					"end": "$",
+					"name": "comment.line.gotemplate"
+				}
+			]
+		},
+		"operators": {
+			"patterns": [
+				{
+					"match": ":?=",
+					"name": "keyword.operator.assignment.gotemplate"
+				},
+				{
+					"match": "\\|",
+					"name": "keyword.operator.pipe.gotemplate"
+				}
+			]
+		},
+		"variables": {
+			"patterns": [
+				{
+					"match": "\\.\\w*",
+					"name": "variable.sub.property.gotemplate"
+				},
+				{
+					"match": "\\$\\w*",
+					"name": "variable.other.readwrite.gotemplate"
+				}
+			]
+		},
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control.gotemplate",
+					"match": "\\b(if|while|for|return)\\b"
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.double.gotemplate",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.gotemplate",
+					"match": "\\\\."
+				}
+			]
+		}
+	},
+	"scopeName": "source.gotemplate"
+}

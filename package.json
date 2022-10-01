@@ -1,0 +1,42 @@
+{
+  "name": "gotmpl-syntax-highlighter",
+  "displayName": "gotmpl-syntax-highlighter",
+  "description": "Go Template Syntax Highlighter for Reply",
+  "version": "0.0.1",
+  "publisher": "karyan40024",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/karyan40024/gotmpl-syntax-highlighter.git"
+  },
+  "engines": {
+    "vscode": "^1.70.0"
+  },
+  "icon": "images/logo.png",
+  "categories": [
+    "Programming Languages"
+  ],
+  "keywords": [
+    "go",
+    "template",
+    "highlight",
+    "syntax"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "gotemplate",
+      "aliases": ["gotemplate"],
+      "extensions": [
+        "gotmpl",
+        ".tmpl",
+        ".tpl"
+      ],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "gotemplate",
+      "scopeName": "source.gotemplate",
+      "path": "./syntaxes/gotemplate.tmLanguage.json"
+    }]
+  }
+}
