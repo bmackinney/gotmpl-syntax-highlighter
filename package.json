@@ -2,7 +2,7 @@
   "name": "gotmpl-syntax-highlighter",
   "displayName": "gotmpl-syntax-highlighter",
   "description": "Go Template Syntax Highlighter for Reply",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "publisher": "karyan40024",
   "license": "MIT",
   "repository": {
